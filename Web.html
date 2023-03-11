@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>carban</title>
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://in.carbanio.com/images/fav_new.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://in.carbanio.com/css/app-new.css?id=b66fe65c2c5ff8cb865f">
+    <style>
+        #button {
+            background-color: rgb(8, 8, 107);
+            float: right;
+            margin: 10px;
+            color: #fff;
+
+        }
+
+
+
+        #example1 {
+            background-image: url(image.png), url(paper.gif);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 15px;
+            background: rgba(78, 140, 15, 0.554);
+            background-image: url(./images/img1.svg);
+            padding: 80px;
+            margin-top: 5px;
+            width: 100%;
+            color: #fff;
+
+
+
+        }
+
+        #button1 {
+            background-color: rgb(8, 8, 107);
+            float: left;
+            margin: 10px;
+            color: #fff;
+        }
+
+        div-img {
+            float: left;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            margin: 60px;
+        }
+
+        .my-2 {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .rating-line {
+            border-top: 2px solid #56a803;
+            max-width: 5.563rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rating-box {
+            max-width: 0.75rem;
+            height: 0.75rem;
+            margin-left: auto;
+            border: solid 2px #56a803;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-right: auto;
+            margin-top: -0.438rem;
+        }
+
+        .item1 {
+            grid-area: 1 / 3 / 2 / 4;
+            border: 1px solid black;
+            margin: 20px;
+
+
+        }
+
+        .item2 {
+            grid-area: 2 / 3 / 3 / 4;
+            border: 1px solid black;
+            margin: 20px;
+
+        }
+
+        .item3 {
+            grid-area: 1 / 1 / 2 / 2;
+            border: 1px solid black;
+            margin: 20px;
+
+        }
+
+        .item4 {
+            grid-area: 1 / 2 / 2 / 3;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        .item5 {
+            grid-area: 2 / 1 / 3 / 2;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        .item6 {
+            grid-area: 2 / 2 / 3 / 3;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        .brand {
+            position: absolute;
+            width: 100%;
+            height: 775px;
+            left: 0px;
+            top: 1762px;
+
+            background: radial-gradient(130.45% 130.45% at 50% -14.39%, #2C209B 0%, rgba(44, 32, 155, 0.85) 56.85%, #2C209B 100%);
+            border-radius: 100px 0px 0px 0px;
+
+        }
+
+        .brand>h4 {
+            position: absolute;
+            left: 20%;
+            right: 3%;
+            top: 5%;
+            bottom: 91.24%;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 20px;
+
+            text-transform: capitalize;
+
+            color: #FFFFFF;
+            padding: 50px;
+        }
+
+
+        .box {
+            box-sizing: border-box;
+
+            position: absolute;
+            left: 10%;
+            right: 15%;
+            top: 30%;
+            bottom: 10%;
+            width: 80%;
+            height: 60%;
+
+            background: #FFFFFF;
+            border: 2px solid #2C209B;
+            box-shadow: -4px -4px 8px rgba(231, 228, 255, 0.12), 4px 4px 4px rgba(12, 12, 102, 0.12);
+            border-radius: 30px;
+        }
+
+        .box>h1 {
+            width: 140px;
+            height: 60px;
+            padding-left: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 80px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #56A803;
+        }
+
+        .box>h3 {
+            width: 532px;
+            height: 33px;
+            padding-left: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            /* identical to box height */
+
+
+            color: #3B3B84;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        .box>p {
+            width: 532px;
+            height: 135px;
+            padding-left: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            letter-spacing: 0.02em;
+
+            color: #3B3B84;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+        }
+
+        .box>p>img {
+            float: right;
+            position: absolute;
+            left: 71.98%;
+            right: 7.88%;
+            top: 20%;
+            bottom: 50%;
+        }
+
+        .box>h2 {
+            width: 128px;
+            height: 27px;
+            padding-left: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 27px;
+            text-transform: uppercase;
+
+            color: #56A803;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .brand>#ar1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 12px;
+            gap: 40px;
+
+            position: absolute;
+            left: 15%;
+            right: 67.27%;
+            top: 19.59%;
+            bottom: 71.34%;
+
+            background: #D2CDFF;
+            box-shadow: 4px 4px 4px rgba(12, 12, 102, 0.12), -4px -4px 4px rgba(231, 228, 255, 0.12);
+            border-radius: 30px;
+            width: 250px;
+            height: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 33px;
+            /* identical to box height */
+
+            text-transform: capitalize;
+
+            color: #3B3B84;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        .brand>#ar2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 12px;
+            gap: 40px;
+
+            position: absolute;
+            left: 40%;
+            right: 67.27%;
+            top: 19.59%;
+            bottom: 71.34%;
+          
+
+            background: #D2CDFF;
+            box-shadow: 4px 4px 4px rgba(12, 12, 102, 0.12), -4px -4px 4px rgba(231, 228, 255, 0.12);
+            border-radius: 30px;
+            width: 250px;
+            height: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 33px;
+            /* identical to box height */
+
+            text-transform: capitalize;
+
+            color: #3B3B84;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        .brand>#ar3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 12px;
+            gap: 40px;
+
+            position: absolute;
+            left: 65%;
+            right: 67.27%;
+            top: 19.59%;
+            bottom: 71.34%;
+          
+
+            background: #D2CDFF;
+            box-shadow: 4px 4px 4px rgba(12, 12, 102, 0.12), -4px -4px 4px rgba(231, 228, 255, 0.12);
+            border-radius: 30px;
+            width: 250px;
+            height: 50px;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 33px;
+            /* identical to box height */
+
+            text-transform: capitalize;
+
+            color: #3B3B84;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-1">
+        <div class="d-flex justify-content-between max-width-8 50">
+            <div>
+                <img src="https://in.carbanio.com/assets/phone.svg" class="mr-10" style="color: #fff !important;">
+                <a href="tel:080 6923 3333" style="color:#fff;">080 6923 3333</a>
+            </div>
+            <div>
+                <img src="https://in.carbanio.com/assets/email.svg" class="mr-0">
+                <a href="mailto:cs@carbanio.com" style="color:#fff; margin-inline: 20px; ">cs@carbonio.com</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="https://in.carbanio.com/assets/logo.svg" alt="" />
+        <button id="button">CONTACT US </button>
+
+    </div>
+
+    <div id="example1">
+        <p>Carbanio Ads</p>
+        <h1>Target Your Future Customers!</h1>
+        <img src="images/Photo.png" style="float:right;width:300px;height:200px; position: absolute; left: 69.64%;
+        right: 13.47%;
+        top: 20%;
+        bottom: 89.8%; background: #FFFFFF;
+opacity: 0.7; " />
+        <button id="button1">CONTACT US </button>
+        <p>using Carbanio, your comreshensive advertising partner.</p>
+    </div>
+
+    <h4 style="color: black; text-align: center; padding: 20px;">Why Carbanio Ads</h3>
+        <div class="my-2">
+            <div class="rating-line"></div>
+            <div class="rating-box"></div>
+        </div>
+        <div class="grid-container">
+            <div class="item1">
+                <img src="images/Cities.png" alt="">
+                <p style="color: green;">Visual reach across 4000+ Indian Cities</p>
+                <p style="color: rgb(14, 14, 135);">Connect your ad to every corner of Indian Cities</p>
+            </div>
+            <div class="item2">
+                <img src="images/Sales.png" alt="">
+                <p style="color: green;">Increase your sales</p>
+                <p style="color: rgb(14, 14, 135);">Direct customers to your websites.</p>
+            </div>
+            <div class="item3">
+                <img src="images/Customers.png" alt="">
+                <p style="color: green;">Reach 500k+ Customers</p><br>
+                <p style="color: rgb(14, 14, 135);">Boost the exposure of your company</p>
+            </div>
+            <div class="item4">
+                <img src="images/Countries.png" alt="">
+                <p style="color: green;">Visible in 109 Countries</p><br>
+                <p style="color: rgb(14, 14, 135);">Give your brand a greater visibility</p>
+            </div>
+            <div class="item5">
+                <img src="images/Advertisements.png" alt="">
+                <p style="color: green;">High Performance Advertisements </p><br>
+                <p style="color: rgb(14, 14, 135);">Unlock your potential with Innovative ad placements</p>
+            </div>
+            <div class="item6">6
+                <img src="images/Segments.png" alt="">
+                <p style="color: green;">Rich Audienc Segments</p><br>
+                <p style="color: rgb(14, 14, 135);">Target the right individuals at the right time</p>
+            </div>
+        </div>
+        <div class="brand">
+            <h4>We Offer Advertising For Every Level Of Expertise</h4>
+            <a id="ar1">Branding</a>
+            <a id="ar2">Lead Generation</a>
+            <a id="ar3">SurpLus Inventory</a>
+
+
+            <div class="box">
+                <h1>Branding</h1>
+                <h3>Put Your Brand In The Spotight!</h3>
+                <p><img src="images/Brand.png" alt="" style="width:180px;height:225px;margin-left:20px;">
+                    Carbanio offers an exclusive set of your target audience
+                    to maximise your brand s visibility. Take advantage of
+                    Carbanio s extensive network to create promotional ads
+                    tailored to your targeted audience. Promote your brand
+                    with Carbanio.</p>
+                <h2> CONTACTUS </h2>
+            </div>
+        </div>
+        </div>
+</body>
+
+
+
+</body>
+
+</html>
